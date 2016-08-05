@@ -1,0 +1,256 @@
+/* Dynamic Audio Player */
+/* by Manolo Salsas */
+
+/*  Copyright 2014 Manolo Salsas  (email : manolez@gmail.com)
+
+    This program is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License, version 2, as 
+    published by the Free Software Foundation.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program; if not, write to the Free Software
+    Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+*/	
+
+
+/**************** Play & Add buttons **************************/
+
+.dynamic-play-button-container, .dynamic-add-button-container {
+	clear:both;
+}
+
+.dynamic-play-button, .dynamic-add-button {
+	float:left;
+	margin-right: 10px;
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+}
+.dynamic-play-button {
+	background: url('../images/dyn_play.png') no-repeat;
+	background-size: 30px 30px;
+}
+
+	.dynamic-play-button:hover {
+		background: url('../images/dyn_playB.png') no-repeat;
+		background-size: 30px 30px;
+	}
+
+.dynamic-add-button {
+	background: url('../images/dyn_add.png') no-repeat;
+	background-size: 30px 30px;
+}
+
+	.dynamic-add-button:hover {
+		background: url('../images/dyn_addB.png') no-repeat;
+		background-size: 30px 30px;
+	}
+
+.dynamic-single {
+	float: left;
+}
+
+.dynamic-single.dynamic-single-mp3-src, .dynamic-single.dynamic-single-ogg-src, .dynamic-single.dynamic-single-image, .dynamic-playing-image {
+	display:none;
+}
+
+.dynamic-playing-image img {
+	width: 116px;
+	height: 116px;
+}
+
+/****************** Sidebar ***************************/
+
+#dynamic-player-sidebar {
+	width: 100%;
+	height: 0;
+	line-height: 1;
+	z-index: 100000;
+}
+#dynamic-player-sidebar-inner {
+	position: relative;
+	width: 502px;
+}
+
+/****************** Player ***************************/
+
+.dynamic-playing-image {
+	position: absolute;
+	margin-left: -116px;
+	margin-top: 2px;
+}
+
+.dynamic-lcd-screen {
+	background: url('../images/player/dynLarge_timeScru.png') no-repeat;
+	height: 42px;
+	width: 100%;
+	margin-bottom: -1px;	
+	overflow: hidden;
+}
+	.dynamic-lcd-screen .dynamic-playing-song {
+		height: 32px;
+		margin-left: 0;
+		padding-top: 15px;
+		padding-left: 15px;
+		padding-right: 15px;
+		color: white;
+		font-size: 13px;
+		width: 900px;
+		
+	}
+
+.dynamic-control-panel {
+	font-size: 0;
+}
+.dynamic-maximize {
+	background: url('../images/player/dynLarge_maximize.png') no-repeat;	
+	height: 40px;
+	width: 42px;	
+}
+.dynamic-minimize {
+	background: url('../images/player/dynLarge_minimize.png') no-repeat;	
+	height: 40px;
+	width: 42px;	
+}
+.dynamic-previous {
+	background: url('../images/player/dynLarge_previous.png') no-repeat;
+	height: 40px;
+	width: 80px;
+}
+.dynamic-next {
+	background: url('../images/player/dynLarge_next.png') no-repeat;
+	height: 40px;
+	width: 80px;
+}
+.dynamic-play {
+	background: url('../images/player/dynLarge_play.png') no-repeat;
+	height: 40px;
+	width: 80px;
+}
+.dynamic-pause {
+	background: url('../images/player/dynLarge_pause.png') no-repeat;
+	height: 40px;
+	width: 80px;
+}
+.dynamic-position-scrubber-image {
+	background: url('../images/player/dynLarge_timeScru.png') no-repeat !important;
+	height: 42px !important;
+	width: 100% !important;
+	margin-bottom: -3px !important;
+	cursor: pointer !important;
+}
+	.dynamic-position-scrubber-image .dynamic-position-scrubber {
+		background: #333332 !important;
+		border: none !important;
+		height: 10px !important;
+		margin-top: 16px !important;
+		margin-left: 64px !important;
+		width: 370px !important;
+	}
+	.dynamic-position-scrubber .ui-slider-handle {
+		background: #4f4d5c !important;
+		border: 1px solid black !important;
+		box-sizing: content-box;
+		width: 10px !important;
+		height: 10px !important;
+		margin-left: -5px;
+		margin-top: 4px !important;
+		cursor: pointer !important;
+	}
+
+.dynamic-volume-slider-image {
+	background: url('../images/player/dynLarge_volum.png') no-repeat !important;
+	display: inline-block !important;
+	background-size: auto 100% !important;
+	border: none !important;
+	height: 40px !important;
+	width: 220px !important;
+}
+	.dynamic-volume-slider {
+		background: #333332 !important;
+		border: none !important;
+		height: 8px !important;
+		margin-top: 15px !important;
+		margin-left: 45px !important;
+		width: 70% !important;
+		cursor: pointer !important;
+	}
+	.dynamic-volume-slider .ui-slider-handle {
+		background: #4f4d5c !important;
+		border: 1px solid black !important;
+		box-sizing: content-box;
+		width: 10px !important;
+		height: 10px !important;
+		margin-left: -5px;
+		margin-top: -2px !important;
+		cursor: pointer !important;
+	}
+	.dynamic-volume-slider .ui-slider-range {
+		background: #333332 !important;
+		border-bottom-left-radius: 0 !important;
+		border-top-left-radius: 0 !important;
+	}
+
+.dynamic-image {
+	background-size: 100%;
+}
+.dynamic-inline {
+	display: inline-block;
+}
+
+.dynamic-song-position, .dynamic-song-duration {
+	position: absolute;
+	margin-top: 15px;
+	text-align: center;
+	font-size: 11px;
+	color: white;
+	width: 60px;
+}
+.dynamic-song-duration {
+	margin-left: 440px;
+}
+
+.ui-slider-handle {
+	max-width: 10px;
+	max-height: 13px;
+}
+
+.dynamic-playlist-container {
+	background: url('../images/player/dynLarge_playlist.png') no-repeat;
+	border: 1px solid #4f525c;
+	margin-left: 4px;
+	width: 98%;
+}
+
+#dynamic-playlist {
+	color: white;
+	margin: 0;
+	padding-left: 10px;
+	padding-top: 5px;
+	font-size: 10px;
+}
+	#dynamic-playlist li {
+		list-style: none;
+		margin-top: 5px;
+		cursor: pointer; 
+	}
+	#dynamic-playlist .dynamic-playing {
+		color: green;
+	}
+
+.jspTrack {
+  background-color: gray; /*Changes drag box to black */
+}
+
+.jspDrag {
+  background-color: #4f525c; /*Changes drag box to black */
+}
+
+.jspArrow {
+	background-color: #4f525c;
+}

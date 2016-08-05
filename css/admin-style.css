@@ -1,0 +1,36 @@
+
+
+.dynamic-title {
+	font-size: 1.3em;
+	margin-left: 10px;
+	font-weight: bold;
+}
+	.dynamic-title img {
+		vertical-align: middle;
+	}
+	
+	.dynamic-options-container {
+		margin-top: 50px;
+		margin-left: 10%;
+	}
+
+.dynamic-option-labels {
+	width: 5%;
+	float: left;
+	font-size:1.1em;
+	margin-top: 5px;
+}
+	.dynamic-option-labels .dynamic-column, .dynamic-options .dynamic-field {
+		height: 40px;
+
+	}
+
+.dynamic-options {
+	width: 90%;
+}
+	.dynamic-options .dynamic-field input.dynamic-input[type="checkbox"] {
+		margin-top: 5px;
+	}
+	.dynamic-options .dynamic-field input.dynamic-input[type="url"] {
+		width: 40%;
+	}
