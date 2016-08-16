@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: audio, player, audio player, mp3, ogg, playlist
 Requires at least: 3.0.1
 Tested up to: 4.5
-Stable tag: 2.2.1
+Stable tag: 2.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -48,6 +48,11 @@ No (but almost). It will work only with HTML5 audio compatible browsers. <a titl
 Reload the page. If the widget "Dynamic Audio Player Widget" is not added to the sidebar, add it manually.
 
 == Changelog ==
+
+= 3.0.0 =
+- Refactor.
+- 40 default tracks.
+- Add "do not animate track title" option.
 
 = 2.3.0 =
 Add "exclude from Shop page" option (for Woocommerce plugin). 
