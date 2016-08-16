@@ -296,15 +296,21 @@
 			} else {
 				//Use default playlist
 				if(typeof $("#dynamic-playlist li").first().attr("data-ogg") !== "undefined" || typeof $("#dynamic-playlist li").first().attr("data-mp3") !== "undefined")  {
-					currentRow = dynThisPlayer.find("#dynamic-playlist li").first();	
-					for(var i=0; i<=12; i++) {
+					currentRow = dynThisPlayer.find("#dynamic-playlist li").first();
+					for(var i=0; i<options.dynTitle.length; i++) {
 						if( typeof options.dynOggFile[i] !== "undefined" && options.dynOggFile[i] || typeof options.dynMp3File[i] !== "undefined" && options.dynMp3File[i] ) {
 							currentRow.attr("data-title", options.dynTitle[i]);
 							currentRow.attr("data-artist", ' ( ' + options.dynArtist[i] + ' ) ');
-							if(options.dynAlbum[i]) 
+							if(options.dynAlbum[i]) {
 								currentRow.attr("data-album", ' - Album: ' + options.dynAlbum[i]);
-							if(options.dynDate[i])
-							currentRow.attr("data-album-date", ' - Date: ' + options.dynDate[i]);
+							} else {
+								currentRow.attr("data-album", '');
+							}
+							if(options.dynDate[i]) {
+								currentRow.attr("data-album-date", ' - Date: ' + options.dynDate[i]);
+							} else {
+								currentRow.attr("data-album-date", '');
+							}
 							currentRow.attr("data-mp3", options.dynMp3File[i]);
 							currentRow.attr("data-ogg", options.dynOggFile[i]);
 							currentRow.attr("data-image", options.dynImageFile[i]);

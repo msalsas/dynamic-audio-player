@@ -427,7 +427,7 @@ class Dynamic_Player_Widget extends WP_Widget {
 	function widget( $args, $instance ) {
 		extract( $args );
 
-		for ( $i = 1; $i <= 12; $i ++ ) {
+		for ( $i = 1; $i <= 40; $i ++ ) {
 			$instance['dynTitle'][ $i - 1 ]     = strip_tags( get_option( 'dynamic_title_' . $i ) );
 			$instance['dynArtist'][ $i - 1 ]    = strip_tags( get_option( 'dynamic_artist_' . $i ) );
 			$instance['dynAlbum'][ $i - 1 ]     = strip_tags( get_option( 'dynamic_album_' . $i ) );
