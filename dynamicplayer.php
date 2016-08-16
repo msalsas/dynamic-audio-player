@@ -384,6 +384,7 @@ if ( isset( $active_sidebars['dynamic-player-sidebar'] ) && empty( $active_sideb
 		'dynPlayerMargin'        => 35,
 		'dynPlayerHorMarginFrom' => 'centered',
 		'dynPlayerHorMargin'     => 0,
+		'dynDoNotAnimateTitle'   => 'false',
 		'dynPlayerShowHomePage'  => '',
 		'dynPlayerExcludePages'  => '',
 		'dynPlayerIncludePages'  => '',
@@ -480,6 +481,7 @@ class Dynamic_Player_Widget extends WP_Widget {
 		$instance['dynPlayerMargin']        = strip_tags( $new_instance['dynPlayerMargin'] );
 		$instance['dynPlayerHorMarginFrom'] = strip_tags( $new_instance['dynPlayerHorMarginFrom'] );
 		$instance['dynPlayerHorMargin']     = strip_tags( $new_instance['dynPlayerHorMargin'] );
+		$instance['dynDoNotAnimateTitle']   = strip_tags( $new_instance['dynDoNotAnimateTitle'] );
 		$instance['dynPlayerShowHomePage']  = strip_tags( $new_instance['dynPlayerShowHomePage'] );
 		$instance['dynPlayerExcludePages']  = strip_tags( $new_instance['dynPlayerExcludePages'] );
 		$instance['dynPlayerIncludePages']  = strip_tags( $new_instance['dynPlayerIncludePages'] );
@@ -504,6 +506,7 @@ class Dynamic_Player_Widget extends WP_Widget {
 			'dynPlayerMargin'        => 35,
 			'dynPlayerHorMarginFrom' => 'centered',
 			'dynPlayerHorMargin'     => 0,
+			'dynDoNotAnimateTitle'   => 'false',
 			'dynPlayerShowHomePage'  => '',
 			'dynPlayerExcludePages'  => '',
 			'dynPlayerIncludePages'  => '',
@@ -614,6 +617,18 @@ class Dynamic_Player_Widget extends WP_Widget {
 			       name="<?php echo $this->get_field_name( 'dynPlayerHorMargin' ); ?>" class="widefat"
 			       style="width:100%;" type="text" value="<?php echo $instance['dynPlayerHorMargin'] ?>"
 			       placeholder="leave blank if player is centered">
+		</p>
+
+		<p>
+			<label for="<?php echo $this->get_field_id( 'dynDoNotAnimateTitle' ); ?>">
+				Do not animate track title
+			</label>
+			<select id="<?php echo $this->get_field_id( 'dynDoNotAnimateTitle' ); ?>"
+					name="<?php echo $this->get_field_name( 'dynDoNotAnimateTitle' ); ?>" class="widefat"
+					style="width:100%;">
+				<option <?php selected( $instance['dynDoNotAnimateTitle'], 'false' ); ?> value="false">false</option>
+				<option <?php selected( $instance['dynDoNotAnimateTitle'], 'true' ); ?> value="true">true</option>
+			</select>
 		</p>
 
 		<p>

@@ -10,6 +10,7 @@
 			dynPlayerMargin: dynamic_options.dynPlayerMargin,
 			dynPlayerHorMarginFrom: dynamic_options.dynPlayerHorMarginFrom,
 			dynPlayerHorMargin: dynamic_options.dynPlayerHorMargin,
+			dynDoNotAnimateTitle: dynamic_options.dynDoNotAnimateTitle,
 			dynTitle: dynamic_options.dynTitle,
 			dynArtist: dynamic_options.dynArtist,
 			dynAlbum: dynamic_options.dynAlbum,
