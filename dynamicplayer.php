@@ -184,11 +184,11 @@ function register_dyn_scripts() {
 }
 
 function isSamePage($currentPage, $pageId, $pageName) {
-	return is_page( $pageId ) && ($currentPage == $pageId) || is_page( $pageName ) && ($currentPage == $pageName);
+	return is_page( $pageId ) && ($currentPage == $pageId) || is_page( $pageName ) && (strtolower($currentPage) == strtolower($pageName));
 }
 
 function isSamePost($currentPost, $postId, $postName) {
-	return is_single( $postId ) && ($currentPost == $postId) || is_single( $postName ) && ($currentPost == $postName);
+	return is_single( $postId ) && ($currentPost == $postId) || is_single( $postName ) && (strtolower($currentPost) == strtolower($postName));
 }
 
 
