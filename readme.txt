@@ -18,9 +18,10 @@ Provides an audio player widget
 with a dynamic playlist and shortcodes.
 Tracks keep playing during navigation.
 
-You can find an example and a detailed description at <a href="http://dynamicaudioplayer.com/">dynamicaudioplayer.com/</a>.
-And some tutorials at <a href="http://dynamicaudioplayer.com/tutorials/">dynamicaudioplayer.com/tutorials/</a>.
+You can find an example and a detailed description at <a href="http://dynamicaudioplayer.com">dynamicaudioplayer.com</a>.
+And some tutorials at <a href="http://dynamicaudioplayer.com/tutorials">dynamicaudioplayer.com/tutorials</a>.
 
+There is also a Github repository at <a href="https://github.com/msalsas/dynamic-audio-player">https://github.com/msalsas/dynamic-audio-player</a>, so you are free to contribute.
 
 == Installation ==
 
