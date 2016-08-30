@@ -3,7 +3,7 @@
 Plugin Name: Dynamic Audio Player
 Plugin URI: http://dynamicaudioplayer.com
 Description: This plugin allows you to add an audio player widget with a dynamic playlist and shortcodes for single buttons
-Version: 3.0.0
+Version: 3.1.0
 Author: Manolo Salsas Durán
 Author URI: http://msalsas.com/
 License: GPL2
@@ -391,6 +391,7 @@ if ( isset( $active_sidebars['dynamic-player-sidebar'] ) && empty( $active_sideb
 		'dynPlayerExcludePosts'  => '',
 		'dynPlayerIncludePosts'  => '',
 		'dynPlayerShowShopPage'  => '',
+		'dynUsingFancyBox'		 => '',
 	);
 	$active_sidebars['dynamic-player-sidebar'] = array( 'dynamic-player-widget-1' );
 	update_option( 'widget_dynamic-player-widget', $dynamicWidgetOptions );
@@ -488,6 +489,7 @@ class Dynamic_Player_Widget extends WP_Widget {
 		$instance['dynPlayerExcludePosts']  = strip_tags( $new_instance['dynPlayerExcludePosts'] );
 		$instance['dynPlayerIncludePosts']  = strip_tags( $new_instance['dynPlayerIncludePosts'] );
 		$instance['dynPlayerShowShopPage']  = strip_tags( $new_instance['dynPlayerShowShopPage'] );
+		$instance['dynUsingFancyBox']       = strip_tags( $new_instance['dynUsingFancyBox'] );
 
 		return $instance;
 	}
@@ -513,6 +515,7 @@ class Dynamic_Player_Widget extends WP_Widget {
 			'dynPlayerExcludePosts'  => '',
 			'dynPlayerIncludePosts'  => '',
 			'dynPlayerShowShopPage'  => '',
+			'dynUsingFancyBox'       => '',
 		);
 		$instance = wp_parse_args( (array) $instance, $defaults ); ?>
 
@@ -696,6 +699,18 @@ class Dynamic_Player_Widget extends WP_Widget {
 			        style="width:100%;">
 				<option <?php selected( $instance['dynPlayerShowShopPage'], 'true' ); ?> value="true">true</option>
 				<option <?php selected( $instance['dynPlayerShowShopPage'], 'false' ); ?> value="false">false</option>
+			</select>
+		</p>
+
+		<p>
+			<label for="<?php echo $this->get_field_id( 'dynUsingFancyBox' ); ?>">
+				Check if you're using FancyBox plugin
+			</label>
+			<select id="<?php echo $this->get_field_id( 'dynUsingFancyBox' ); ?>"
+					name="<?php echo $this->get_field_name( 'dynUsingFancyBox' ); ?>" class="widefat"
+					style="width:100%;">
+				<option <?php selected( $instance['dynUsingFancyBox'], 'false' ); ?> value="false">false</option>
+				<option <?php selected( $instance['dynUsingFancyBox'], 'true' ); ?> value="true">true</option>
 			</select>
 		</p>
 

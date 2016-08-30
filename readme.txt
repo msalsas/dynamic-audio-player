@@ -50,6 +50,9 @@ Reload the page. If the widget "Dynamic Audio Player Widget" is not added to the
 
 == Changelog ==
 
+= 3.1.0 =
+Add "FancyBox" compatibility option.
+
 = 3.0.0 =
 - Refactor.
 - 40 default tracks.

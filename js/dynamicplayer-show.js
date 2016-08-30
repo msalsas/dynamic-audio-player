@@ -11,6 +11,7 @@
 			dynPlayerHorMarginFrom: dynamic_options.dynPlayerHorMarginFrom,
 			dynPlayerHorMargin: dynamic_options.dynPlayerHorMargin,
 			dynDoNotAnimateTitle: dynamic_options.dynDoNotAnimateTitle,
+			dynUsingFancyBox: dynamic_options.dynUsingFancyBox,
 			dynTitle: dynamic_options.dynTitle,
 			dynArtist: dynamic_options.dynArtist,
 			dynAlbum: dynamic_options.dynAlbum,

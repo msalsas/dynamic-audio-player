@@ -47,7 +47,8 @@
             dynPlayerMargin       : '35',
             dynPlayerHorMarginFrom: 'centered',
             dynPlayerHorMargin    : '0',
-            dynDoNotAnimateTitle  : 'false'
+            dynDoNotAnimateTitle  : 'false',
+            dynUsingFancyBox      : 'false'
         }, options);
 
         this.each(function() {
@@ -323,7 +324,11 @@
 
             //Save playlist, current playing song, current time and current volume
             //before clicking a link or submitting a form
-            $("a").on('click', onClickLinkOrSubmitForm);
+            var linkSelector = "a";
+            if (options.dynUsingFancyBox == 'true') {
+                linkSelector = "a:not(a:has(img))";
+            }
+            $(linkSelector).on('click', onClickLinkOrSubmitForm);
             $("form").on('submit', onClickLinkOrSubmitForm);
 
             function onClickLinkOrSubmitForm(e) {
