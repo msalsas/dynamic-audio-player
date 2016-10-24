@@ -50,6 +50,9 @@ Reload the page. If the widget "Dynamic Audio Player Widget" is not added to the
 
 == Changelog ==
 
+= 3.1.1 =
+Remove WP_Widget as deprecated constructor.
+
 = 3.1.0 =
 Add "FancyBox" compatibility option.
 
